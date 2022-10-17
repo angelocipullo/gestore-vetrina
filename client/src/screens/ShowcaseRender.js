@@ -27,7 +27,7 @@ const ShowcaseRender = () => {
   }
 
   return (
-    <div>
+    <div className='app-container'>
       <GalleryComponent gallery={config.gallery} />
       <OverlayText overlayText={config.overlayText} />
     </div>

@@ -1,8 +1,17 @@
-.container{
-    height: 100vh;
-    width: 100%;
+.gallery-container{
     background-color: #e5e5e5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    z-index: -1;
+}
+
+.slide{
+    max-height: 100vh;
+    z-index: -1;
+
+}
+
+.img {
+    object-fit: cover;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
 }

@@ -14,7 +14,7 @@ const OverlayText = ({ overlayText }) => {
     }
 
     return (
-        <div>
+        <div className='text-container'>
             <p style={textStyle} className={overlayText.position}>
                 {overlayText.isMarquee
                     ? <marquee> {overlayText.content} </marquee>
