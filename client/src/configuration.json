@@ -1,0 +1,29 @@
+{
+    "busines": {
+        "name":"BUSINESS NAME HERE"
+    },
+    "logo":{
+        "fileURI":"http://src.it",
+        "position":"top-left"
+    },
+    "gallery": {
+        "images": [
+            { "url":"url", "time":1000},
+            { "url":"url", "time":1000}
+        ],
+        "animation": "slide",
+        "backgroundColor":"#e5e5e5"
+    },
+    "overlayText": {
+        "position":"bottom",
+        "color": "#000",
+        "backgroundColor": "trasparent",
+        "textAlign":"right",
+        "content":"Questo e' un testo predefinito",
+        "fontSize": 50,
+        "isMarquee": true,
+        "textTransform": "uppercase",
+        "fontWeight": 700
+    },
+    "lastUpdated": "2022-10-16T00:40:42.869Z"
+}
