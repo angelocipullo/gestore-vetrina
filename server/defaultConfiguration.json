@@ -7,6 +7,7 @@
         "position":"top-left"
     },
     "gallery": {
+        "isEnabled": false,
         "images": [
             { "url":"http://wonderfulengineering.com/wp-content/uploads/2014/07/Landscape-wallpapers-21.jpg", "time":1000},
             { "url":"https://wallpaperaccess.com/full/514083.jpg", "time":1000},
@@ -16,6 +17,7 @@
         "backgroundColor":"#e5e5e5"
     },
     "overlayText": {
+        "isEnabled": false,
         "position":"bottom",
         "color": "#000",
         "backgroundColor": "trasparent",

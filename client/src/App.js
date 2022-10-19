@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ShowcaseRenderer from './screens/ShowcaseRender';
-import AdminPanel from './screens/AdminPanel';
+import ShowcaseRenderer from './screens/RenderScreen';
+import AdminPanel from './screens/AdminScreen';
 
 function App() {
 

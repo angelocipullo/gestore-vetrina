@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.flex{
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.h1 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.p1{
+  color: #fff;
+  font-size: 18px;
+}

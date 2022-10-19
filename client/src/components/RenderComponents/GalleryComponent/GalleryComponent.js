@@ -21,32 +21,33 @@ const GalleryComponent = ({ gallery }) => {
 
     const renderImages = (img, key) => {
         return (
-            <SwiperSlide>
+            <SwiperSlide key={key}>
                 <img src={img.url} className='img' />
             </SwiperSlide>
         )
     }
 
-    return (
-        <div className='gallery-container' style={galleryStyle}>
-            <Swiper
-                loop={true}
-                spaceBetween={30}
-                centeredSlides={true}
-                autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
-                }}
-                pagination={{
-                    clickable: true,
-                }}
-                modules={[Autoplay, Pagination ]}
-                className="slide"
-            >
-                {gallery.images.map(renderImages)}
-            </Swiper>
-        </div>
-    )
+    if (gallery.isEnabled)
+        return (
+            <div className='gallery-container' style={galleryStyle} >
+                <Swiper
+                    loop={true}
+                    spaceBetween={30}
+                    centeredSlides={true}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    modules={[Autoplay, Pagination]}
+                    className="slide"
+                >
+                    {gallery.images.map(renderImages)}
+                </Swiper>
+            </div>
+        )
 }
 
 export default GalleryComponent
