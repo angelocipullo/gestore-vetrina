@@ -45,6 +45,8 @@ const sendMessage = (json) => {
 
 
 wsServer.on('request', function (request) {
+    const timestamp = `[${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getMilliseconds()}] `
+
     var userID = getUniqueID();
     const connection = request.accept(null, request.origin);
     clients[userID] = connection;
