@@ -21,8 +21,8 @@ const GalleryComponent = ({ gallery }) => {
 
     const renderImages = (img, key) => {
         return (
-            <SwiperSlide key={key}>
-                <img src={img.url} className='img' />
+            <SwiperSlide className='slide' key={key}>
+                <img style={{ objectFit: img.resizeType }} src={img.url} className='img' />
             </SwiperSlide>
         )
     }

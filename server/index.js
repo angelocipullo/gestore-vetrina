@@ -1,18 +1,22 @@
 // dependencies
-const webSocketsServerPort = 8000;
 const webSocketServer = require('websocket').server;
 const http = require('http');
 const fs = require('fs');
 
 // utils
-const defaultConfig = require('./defaultConfiguration.json')
+const PORT = 8000;
+const DEFAULT_CONFIG = require('./defaultConfiguration.json')
 const EVENTS = require('../client/src/utils/eventType.js')
-
+const PREFIX = "[Gestore Vetrina]"
 
 // Start server
 const server = http.createServer();
-server.listen(webSocketsServerPort);
-console.log("[Gestore Vetrina] Server listening on port " + webSocketsServerPort)
+server.listen(PORT);
+
+require('dns').lookup(require('os').hostname(), function (err, add, fam) {
+    fs.writeFileSync('client/src/utils/serverAddress.json', `{ "address": "${add}" }`)
+    console.log(PREFIX, `Server listening on ${add}:${PORT}`)
+  })
 
 const wsServer = new webSocketServer({
     httpServer: server
@@ -28,12 +32,11 @@ let globalConfig = {}
 
 if ( fs.existsSync('./server/configuration.json')) {
     globalConfig = require('./configuration.json');
-    console.log('loaded from local')
+    console.log(PREFIX, 'Config found and loaded')
 } else {
-    globalConfig = defaultConfig;
+    globalConfig = DEFAULT_CONFIG;
 }
 
-const timestamp = `[${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getMilliseconds()}] `
 const clients = {};
 
 const sendMessage = (json) => {
@@ -77,5 +80,7 @@ const onChange = (message) => {
 }
 
 const onClose = () => {
-    console.log(timestamp + 'Client disconnected');
+    const timestamp = `[${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getMilliseconds()}] `
+
+    console.log(timestamp + 'client disconnected');
 }

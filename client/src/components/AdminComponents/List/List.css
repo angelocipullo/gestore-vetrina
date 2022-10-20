@@ -1,0 +1,18 @@
+.list-container{
+}
+
+.list-item {
+    margin: 3px 0;
+    background-color: red;
+    height: 80px;
+    overflow: hidden;
+    width: 80px;
+    position: relative;
+}
+
+.list-item-index {
+    position: absolute;
+    bottom: 5px; left: 5px;
+    background-color: black;
+    color: #fff;
+}
