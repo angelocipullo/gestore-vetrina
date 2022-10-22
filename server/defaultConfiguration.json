@@ -7,11 +7,12 @@
         "position":"top-left"
     },
     "gallery": {
+        "slideDelay": 5000,
         "isEnabled": false,
         "images": [
-            { "url":"http://wonderfulengineering.com/wp-content/uploads/2014/07/Landscape-wallpapers-21.jpg", "resizeType":"cover"},
-            { "url":"https://wallpaperaccess.com/full/514083.jpg", "resizeType":"cover"},
-            { "url": "https://previews.123rf.com/images/nadianb/nadianb1709/nadianb170900256/86443804-idyllic-landscape-in-mountains-rural-scene-beautiful-nature-image-toned-square.jpg", "resizeType":"cover"}
+            { "url":"img1.jpg", "resizeType":"cover"},
+            { "url":"img2.webp", "resizeType":"cover"},
+            { "url": "img3.webp", "resizeType":"cover"}
         ],
         "animation": "slide",
         "backgroundColor":"#e5e5e5"

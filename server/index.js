@@ -75,6 +75,11 @@ const onChange = (message) => {
                 globalConfig = dataFromClient.newConfig
                 json.data = { newConfig: dataFromClient.newConfig };
                 break;
+            case EVENTS.CONFIG_RESET:
+                globalConfig = DEFAULT_CONFIG
+                json.data = { newConfig: DEFAULT_CONFIG };
+            case EVENTS.IMAGE_UPLOAD:
+                console.log(dataFromClient)
         }
 
         sendMessage(JSON.stringify(json));

@@ -22,7 +22,7 @@ const GalleryComponent = ({ gallery }) => {
     const renderImages = (img, key) => {
         return (
             <SwiperSlide className='slide' key={key}>
-                <img style={{ objectFit: img.resizeType }} src={img.url} className='img' />
+                <img style={{ objectFit: img.resizeType }} src={require(`../../../images/${img.url}`)} className='img' />
             </SwiperSlide>
         )
     }
@@ -35,7 +35,7 @@ const GalleryComponent = ({ gallery }) => {
                     spaceBetween={30}
                     centeredSlides={true}
                     autoplay={{
-                        delay: 2500,
+                        delay: gallery.slideDelay,
                         disableOnInteraction: false,
                     }}
                     pagination={{

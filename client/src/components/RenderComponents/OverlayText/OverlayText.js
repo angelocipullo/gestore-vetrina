@@ -19,7 +19,7 @@ const OverlayText = ({ overlayText }) => {
                 <p style={textStyle} className={overlayText.position}>
                     {overlayText.isMarquee
                         ? <marquee> {overlayText.content} </marquee>
-                        : <p> {overlayText.content} </p>
+                        : <p style={{ textAlign:'center', marginBottom: 15 }}> {overlayText.content} </p>
                     }
                 </p>
             </div>

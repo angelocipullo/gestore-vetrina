@@ -5,7 +5,7 @@ const Section = (props ) => {
 
     return (
         <div className='section-container'>
-            <p onClick={() => setIsOpen(!isOpen)} style={{ marginTop: 20, marginBottom: 0}} className='h1'>{props.name} </p>
+            <p style={{cursor: 'pointer'}} onClick={() => setIsOpen(!isOpen)} style={{ marginTop: 20, marginBottom: 0}} className='h1'>{props.name} </p>
 
             {isOpen && props.children}
 
