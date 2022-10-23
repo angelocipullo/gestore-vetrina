@@ -10,9 +10,9 @@
         "slideDelay": 5000,
         "isEnabled": false,
         "images": [
-            { "url":"img1.jpg", "resizeType":"cover"},
-            { "url":"img2.webp", "resizeType":"cover"},
-            { "url": "img3.webp", "resizeType":"cover"}
+            { "url":"default_img1.jpg", "resizeType":"cover"},
+            { "url":"default_img2.webp", "resizeType":"cover"},
+            { "url": "default_img3.webp", "resizeType":"cover"}
         ],
         "animation": "slide",
         "backgroundColor":"#e5e5e5"
