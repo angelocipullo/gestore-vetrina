@@ -42,7 +42,7 @@ const GalleryComponent = ({ gallery }) => {
                         clickable: true,
                     }}
                     modules={[Autoplay, Pagination]}
-                    className="slide"
+                    className="slides__container"
                 >
                     {gallery.images.map(renderImages)}
                 </Swiper>
